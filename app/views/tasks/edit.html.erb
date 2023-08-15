@@ -1,0 +1,13 @@
+<div>
+<h2>Edit the Task:</h2>
+
+<%= form_with model: @task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.label :details %>
+  <%= f.check_box :completed %>
+  <%= f.submit %>
+<% end %>
+</div>

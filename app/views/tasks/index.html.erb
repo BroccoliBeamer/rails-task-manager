@@ -1,0 +1,19 @@
+<div>
+<h1>Tasks</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+  <%if task.completed == true%>
+    <div class="list">
+      <li style="text-decoration: line-through;"><%= link_to task.title, task_path(task) %></li>
+    </div>
+  <%else%>
+    <div class="list">
+      <li><%= link_to task.title, task_path(task) %></li>
+    </div>
+  <% end %>
+  <% end %>
+</ul>
+
+<%= link_to 'Create New Task', new_path %>
+</div>
